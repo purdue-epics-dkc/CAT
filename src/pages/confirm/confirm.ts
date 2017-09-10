@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { AvatarPage } from '../avatar/avatar';
 
 @IonicPage()
 @Component({
@@ -14,6 +15,10 @@ export class ConfirmPage {
 
   goToHomePage() {
     this.navCtrl.push(HomePage);
+  }
+
+  goToAvatarPage() {
+    this.navCtrl.push(AvatarPage);
   }
 
   ionViewDidLoad() {
