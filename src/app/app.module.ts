@@ -8,13 +8,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ConfirmPage } from '../pages/confirm/confirm';
 import { AvatarPage } from '../pages/avatar/avatar';
+import { TranscriptPage } from '../pages/transcript/transcript';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ConfirmPage,
-    AvatarPage
+    AvatarPage,
+    TranscriptPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { AvatarPage } from '../pages/avatar/avatar';
     MyApp,
     HomePage,
     ConfirmPage,
-    AvatarPage
+    AvatarPage,
+    TranscriptPage
   ],
   providers: [
     StatusBar,
