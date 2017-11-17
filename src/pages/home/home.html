@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Welcome to CAT
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1> Computer ASL Translation </h1>
+  <button ion-button round color="danger" class="record" (click)="onRecordButtonPressed()">{{ text }} </button>
+  <p>
+    Push the button above to start recording speech!
+  </p>
+
+  <button ion-button round color="primary"(click)="goToLibraryPage()">Library</button>
+  <p color>
+    Push the button above to access saved messages!
+  </p>
+</ion-content> 
+ 
