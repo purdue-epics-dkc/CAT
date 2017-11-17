@@ -12,8 +12,10 @@ import { LibraryPage } from '../library/library';
 })
 export class AvatarPage {
   title: any;
+  dictionary: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
-    this.title="Fruits ";
+    this.title="Fruits "; 
+    this.dictionary=new Set();
   }
 
   ionViewDidLoad() {
@@ -43,8 +45,9 @@ export class AvatarPage {
             text: 'Save',
             handler: data => {
               this.title=data.name;
-
-            if(this.title!=""){
+// MESSAGE FOR WORKING INPUT
+            if((this.title!="")&&(!this.dictionary.has(this.title))){
+              this.dictionary.add(this.title);
               let alert = this.alertCtrl.create({
                 title: 'Message Saved!',
                 message: this.title+' was saved to the Library ',
@@ -60,8 +63,8 @@ export class AvatarPage {
               });
               alert.present();
             }
-
-            else{
+// ERROR MESSAGE FOR NO INPUT
+            else if(this.title==""){
               let alert = this.alertCtrl.create({
                 title: 'Error!',
                 message: 'Please enter a title to save this message',
@@ -77,6 +80,24 @@ export class AvatarPage {
               });
               alert.present();
             }
+// ERROR MESSAGE FOR DICTIONARY ERROR
+            else{
+              let alert = this.alertCtrl.create({
+                title: 'Error!',
+                message: 'Please enter a title name that has not been used',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    role: 'cancel',
+                    handler: () => {
+                      console.log('Okay clicked');
+                    }
+                  },
+                ]
+              });
+              alert.present();
+            }
+
             }
           }
         ]
