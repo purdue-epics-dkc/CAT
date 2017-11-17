@@ -43,6 +43,9 @@ export class AvatarPage {
             text: 'Save',
             handler: data => {
               this.title=data.name;
+
+
+            if(this.title!=''){
               let alert = this.alertCtrl.create({
                 title: 'Message Saved!',
                 message: this.title+' was saved to the Library ',
@@ -57,6 +60,28 @@ export class AvatarPage {
                 ]
               });
               alert.present();
+            }
+
+
+            else{
+              let alert = this.alertCtrl.create({
+                title: 'Error',
+                message: 'Please enter a title to save this message',
+                buttons: [
+                  {
+                    text: 'Okay',
+                    role: 'cancel',
+                    handler: () => {
+                      console.log('Okay clicked');
+                    }
+                  },
+                ]
+              });
+              alert.present();
+            }
+
+
+
             }
           }
         ]

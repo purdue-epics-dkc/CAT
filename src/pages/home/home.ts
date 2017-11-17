@@ -19,8 +19,8 @@ export class HomePage {
     if (this.recording == false ) {
       this.recording = true;
       this.text = "\u25A0";      
-    } else {
-      this.recording = false;
+    } 
+    else {this.recording = false;
       this.text = "\u25CF";
       this.navCtrl.push(ConfirmPage);
     }
