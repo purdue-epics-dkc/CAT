@@ -13,9 +13,11 @@ import { LibraryPage } from '../library/library';
 export class AvatarPage {
   title: any;
   dictionary: any;
+  test: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
     this.title="Fruits "; 
     this.dictionary=new Set();
+    this.test="test";
   }
 
   ionViewDidLoad() {
