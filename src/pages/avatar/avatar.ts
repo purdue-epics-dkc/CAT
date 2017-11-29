@@ -86,7 +86,7 @@ export class AvatarPage {
             else{
               let alert = this.alertCtrl.create({
                 title: 'Error!',
-                message: 'Please enter a title name that has not been used',
+                message: 'Please enter a message title that has not been used',
                 buttons: [
                   {
                     text: 'Okay',

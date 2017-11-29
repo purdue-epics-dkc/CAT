@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AvatarPage } from '../avatar/avatar';
+import dictionary from '../avatar/avatar';
 
 @IonicPage()
 @Component({
