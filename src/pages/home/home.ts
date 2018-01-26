@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { ConfirmPage } from '../confirm/confirm';
 import { LibraryPage } from '../library/library';
-import { SavedPage } from '..//saved/saved';
 
 @Component({
   selector: 'page-home',

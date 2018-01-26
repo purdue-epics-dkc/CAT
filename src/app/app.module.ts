@@ -10,7 +10,6 @@ import { ConfirmPage } from '../pages/confirm/confirm';
 import { AvatarPage } from '../pages/avatar/avatar';
 import { TranscriptPage } from '../pages/transcript/transcript';
 import { LibraryPage } from '../pages/library/library';
-import { SavedPage } from '../pages/saved/saved';
 
 
 @NgModule({
@@ -21,7 +20,6 @@ import { SavedPage } from '../pages/saved/saved';
     AvatarPage,
     TranscriptPage,
     LibraryPage,
-    SavedPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +33,6 @@ import { SavedPage } from '../pages/saved/saved';
     AvatarPage,
     TranscriptPage,
     LibraryPage,
-    SavedPage
   ],
   providers: [
     StatusBar,
