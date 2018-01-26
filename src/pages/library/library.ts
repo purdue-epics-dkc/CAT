@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AvatarPage } from '../avatar/avatar';
-import dictionary from '../avatar/avatar';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -9,11 +7,10 @@ import dictionary from '../avatar/avatar';
   templateUrl: 'library.html',
 })
 export class LibraryPage {
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
-
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad LibraryPage');
   }
-
 }

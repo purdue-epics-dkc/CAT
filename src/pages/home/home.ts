@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { ConfirmPage } from '../confirm/confirm';
 import { LibraryPage } from '../library/library';
+import { SavedPage } from '..//saved/saved';
 
 @Component({
   selector: 'page-home',
@@ -10,7 +11,7 @@ import { LibraryPage } from '../library/library';
 export class HomePage {
   recording: boolean;
   text: string;
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
     this.recording = false;
     this.text = "\u25CF";
   }
@@ -18,17 +19,15 @@ export class HomePage {
   onRecordButtonPressed() {
     if (this.recording == false ) {
       this.recording = true;
-      this.text = "\u25A0";      
+      this.text = "\u25A0";   
     } 
     else {this.recording = false;
       this.text = "\u25CF";
       this.navCtrl.push(ConfirmPage);
     }
-  }
+}
 
   goToLibraryPage() {
     this.navCtrl.push(LibraryPage);
   }
-
-
 }

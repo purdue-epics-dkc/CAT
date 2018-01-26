@@ -12,6 +12,7 @@ import { TranscriptPage } from '../pages/transcript/transcript';
 import { LibraryPage } from '../pages/library/library';
 import { SavedPage } from '../pages/saved/saved';
 
+
 @NgModule({
   declarations: [
     MyApp,

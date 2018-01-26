@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { SavedPage} from '../saved/saved';
 import { AlertController } from 'ionic-angular';
-import { LibraryPage } from '../library/library';
 
 @IonicPage()
 @Component({
