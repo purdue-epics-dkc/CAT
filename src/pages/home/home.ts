@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { ConfirmPage } from '../confirm/confirm';
 import { LibraryPage } from '../library/library';
+import { MediaPlugin } from 'ionic-native';
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,14 @@ export class HomePage {
     this.recording = false;
     this.text = "\u25CF";
   }
-
+  showAlert(message) {
+   let alert = this.alertCtrl.create({
+      title: 'Error',
+      subTitle: message,
+      buttons: ['OK']
+    });
+    alert.present();
+  }
   onRecordButtonPressed() {
     if (this.recording == false ) {
       this.recording = true;
@@ -24,7 +32,16 @@ export class HomePage {
       this.text = "\u25CF";
       this.navCtrl.push(ConfirmPage);
     }
+    try {
+    let media = new MediaPlugin('../Library/NoCloud/recording.wav');
+    media.startRecord();
+    }
+    catch (e) {
+      this.showAlert('Could not start recording.');
+    }
 }
+
+
 
   goToLibraryPage() {
     this.navCtrl.push(LibraryPage);
