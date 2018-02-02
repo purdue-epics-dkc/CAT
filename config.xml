@@ -84,4 +84,5 @@
     <plugin name="cordova-plugin-media" spec="^5.0.1" />
     <engine name="ios" spec="~4.5.3" />
     <plugin name="cordova-plugin-crosswalk-webview" spec="^2.4.0" />
+    <allow-navigation href="http://10.186.64.37:8100" />
 </widget>
