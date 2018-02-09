@@ -3,6 +3,7 @@ import { NavController, AlertController } from 'ionic-angular';
 import { ConfirmPage } from '../confirm/confirm';
 import { LibraryPage } from '../library/library';
 import { MediaPlugin } from 'ionic-native';
+import { AboutPage } from '..//about/about';
 
 @Component({
   selector: 'page-home',
@@ -45,6 +46,10 @@ export class HomePage {
 
   goToLibraryPage() {
     this.navCtrl.push(LibraryPage);
+  }
+
+  goToAboutPage() {
+    this.navCtrl.push(AboutPage);
   }
   
 }
