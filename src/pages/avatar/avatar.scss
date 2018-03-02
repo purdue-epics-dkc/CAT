@@ -1,8 +1,11 @@
 page-avatar {
-  ion-content {
-      text-align: center;
+    ion-content {
+        text-align: center;
+    }
+    ion-header {
+        text-align: center;
+    }
   }
-  ion-header {
-      text-align: center;
-  }
+.saved{
+    overflow: hidden;
 }

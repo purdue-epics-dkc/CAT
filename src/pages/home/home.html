@@ -1,14 +1,37 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Welcome to CAT
+      Welcome
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <button ion-button round (click)="onRecordButtonPressed()">{{ text }}</button>
+  <h1> Computer ASL Translation </h1>
+  <button ion-button round color="danger" class="record" (click)="listenForSpeech" (click)="onRecordButtonPressed()">\u25A0</button>
+  <button ion-button round color="danger" class="stop" (click)="onStopButtonPressed()">\u25CF</button>
   <p>
     Push the button above to start recording speech!
   </p>
-</ion-content>
+
+  <button ion-button round color="primary"(click)="goToLibraryPage()">Library</button>
+  <p color class="message">
+    Push the button above to access saved messages!
+  </p>
+  <button ion-button round color="primary"(click)="goToAboutPage()">About</button>
+  <p color class="message">
+    Push the button above to learn about us!
+  </p>
+
+  <ion-card>
+    <ion-card-content *ngFor="let speech of speechList">
+      <p>{{speech}}</p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+</ion-content> 
+   
+  

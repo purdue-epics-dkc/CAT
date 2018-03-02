@@ -14,7 +14,9 @@ $app-direction: ltr;
 
 @import "ionic.globals";
 
-
+.scroll-bar-indicator{
+  display: none;
+}
 // Shared Variables
 // --------------------------------------------------
 // To customize the look and feel of this app, you can override
@@ -34,10 +36,10 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:    #3b93e6,
+  secondary:  #e48d1c,
   danger:     #f53d3d,
-  light:      #f4f4f4,
+  light:      #ffffff,
   dark:       #222
 );
 

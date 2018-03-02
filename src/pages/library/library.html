@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Library</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list-header>
+    Saved Messages
+  </ion-list-header>
+  <ion-searchbar
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+  
+  <ion-list>
+    <ion-item>
+      <h2> {{ test }} </h2>>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>

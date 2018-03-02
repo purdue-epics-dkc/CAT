@@ -1,6 +1,6 @@
 <ion-header>
-
-  <ion-navbar>
+  
+  <ion-navbar color="primary">
     <ion-title>Avatar</ion-title>
   </ion-navbar>
 
@@ -10,6 +10,7 @@
 <ion-content padding>
   <ion-img width="300" height="400" src="/Users/dwezil/Documents/Epics/cat/resources/blankvideo.png"></ion-img>
   <p></p>
-  <button ion-button round>Save</button>
-  <button ion-button round (click)="goToHomePage()">Return</button>
+  <button ion-button round (click)="onAlertButtonPressed()" class="saved">Save</button>
+  <button ion-button round (click)="goToHomePage()">Home</button>
 </ion-content>
+ 

@@ -1,8 +1,17 @@
 page-home {
-  ion-content {
-      text-align: center;
+    ion-content {
+        text-align: center;
+    }
+    ion-header {
+        text-align: center;
+    }
+    .record{
+        font-size: 15px;
+        padding-bottom: 1px;
+        width: 9%;
+        height: 7%
+    }
+    .playback{
+        
+    }
   }
-  ion-header {
-      text-align: center;
-  }
-}
