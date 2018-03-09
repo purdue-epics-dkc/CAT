@@ -83,4 +83,5 @@
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <allow-navigation href="http://10.186.102.149:8100" />
     <engine name="ios" spec="4.5.4" />
+    <plugin name="cordova-plugin-speechrecognition" spec="^1.2.0" />
 </widget>

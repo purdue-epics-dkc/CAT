@@ -1,51 +1,51 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, Platform } from 'ionic-angular';
 import { LibraryPage } from '../library/library';
 import { AboutPage } from '../about/about';
-import { MediaPlugin } from 'ionic-native';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  media: MediaPlugin = new MediaPlugin('../Library/NoCloud/recording.wav');
-  recording: boolean;
-  text: string;
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, private speech: SpeechRecognition) {
-    this.recording = false;
-    this.text = "\u25CF";
+  matches: String[];
+  isRecording = false;
+
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, private speechRecognition: SpeechRecognition, private plt: Platform, private cd: ChangeDetectorRef) {}
+
+  isIos() {
+    return this.plt.is('ios');
   }
 
-  speechList: Array<string> = [];
-
-  onRecordButtonPressed() {
-    try {
-      let media = new MediaPlugin('../Library/NoCloud/recording.wav');
-      media.startRecord();
+    
+  startListening() {
+    let options = {
+      language: 'en-US'
     }
-    catch (e) {
-      let alert = this.alertCtrl.create({
-        title: 'Could not start recording',
-        buttons: [
-          {
-            text: 'Okay',
-            role: 'cancel',
-            handler: () => {
-              console.log('Okay clicked');
-            }
-          },
-        ]
-      });
-      alert.present();
-    }
-    }
-
-  listenForSpeech():void {
-    this.speech.startListening().subscribe(data => this.speechList = data, error => console.log(error));
+    this.speechRecognition.startListening().subscribe(matches => {
+      this.matches = matches;
+      this.cd.detectChanges();
+    });
+    this.isRecording = true;
   }
 
+  stopListening() {
+    this.speechRecognition.stopListening().then(() => {
+      this.isRecording = false;
+    });
+  }
+
+  getPermission(){
+    this.speechRecognition.hasPermission()
+    .then((hasPermission: boolean) => {
+      if (!hasPermission) {
+        this.speechRecognition.requestPermission();
+      }
+    })
+  } 
+  
 
   goToLibraryPage() {
     this.navCtrl.push(LibraryPage);

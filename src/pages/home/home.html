@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar [color]="isRecording ? 'danger' : 'primary'">
     <ion-title>
       Welcome
     </ion-title>
@@ -8,8 +8,9 @@
 
 <ion-content padding>
   <h1> Computer ASL Translation </h1>
-  <button ion-button round color="danger" class="record" (click)="listenForSpeech" (click)="onRecordButtonPressed()">\u25A0</button>
-  <button ion-button round color="danger" class="stop" (click)="onStopButtonPressed()">\u25CF</button>
+  <button ion-button full color="primary" (click)="getPermission()">Activate Microphone</button>
+  <button ion-button round color="danger" class="record" (click)="startListening()">\u25CF</button>
+  <button ion-button round color="danger" class="stop" (click)="stopListening()" *ngIf="isIos()">\u25A0</button>
   <p>
     Push the button above to start recording speech!
   </p>
@@ -24,14 +25,15 @@
   </p>
 
   <ion-card>
-    <ion-card-content *ngFor="let speech of speechList">
-      <p>{{speech}}</p>
-    </ion-card-content>
+    <ion-card-header> Here are the possible sentences you said: </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+            <ion-item *ngFor="let match of matches">
+              {{ match }}
+            </ion-item>
+        </ion-list>
+      </ion-card-content>
   </ion-card>
-
-
-
-
 </ion-content> 
    
   
