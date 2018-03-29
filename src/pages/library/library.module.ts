@@ -4,7 +4,6 @@ import { LibraryPage } from './library';
 
 @NgModule({
   declarations: [
-    LibraryPage,
   ],
   imports: [
     IonicPageModule.forChild(LibraryPage),
