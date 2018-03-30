@@ -4,6 +4,7 @@ import { LibraryPage } from '../library/library';
 import { AboutPage } from '../about/about';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { ChangeDetectorRef } from '@angular/core';
+import { AvatarPage } from '../avatar/avatar';
 
 @Component({
   selector: 'page-home',
@@ -52,5 +53,9 @@ export class HomePage {
 
   goToAboutPage() {
     this.navCtrl.push(AboutPage);
+  }
+
+  goToAvatarPage() {
+    this.navCtrl.push(AvatarPage);
   }
 }

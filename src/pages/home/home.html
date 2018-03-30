@@ -25,10 +25,10 @@
   </p>
 
   <ion-card>
-    <ion-card-header> Here are the possible sentences you said: </ion-card-header>
+    <ion-card-header> Possible Phrases: </ion-card-header>
       <ion-card-content>
         <ion-list>
-            <button ion-button *ngFor="let match of matches">
+            <button ion-button full *ngFor="let match of matches" (click)="goToAvatarPage()">
               {{ match }}
             </button>
         </ion-list>
