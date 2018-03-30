@@ -4,7 +4,6 @@ import { AvatarPage } from './avatar';
 
 @NgModule({
   declarations: [
-    AvatarPage,
   ],
   imports: [
     IonicPageModule.forChild(AvatarPage),

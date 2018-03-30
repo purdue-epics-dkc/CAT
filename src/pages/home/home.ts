@@ -18,8 +18,7 @@ export class HomePage {
   isIos() {
     return this.plt.is('ios');
   }
-
-    
+ 
   startListening() {
     let options = {
       language: 'en-US'

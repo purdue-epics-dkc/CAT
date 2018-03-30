@@ -4,7 +4,6 @@ import { TranscriptPage } from './transcript';
 
 @NgModule({
   declarations: [
-    TranscriptPage,
   ],
   imports: [
     IonicPageModule.forChild(TranscriptPage),

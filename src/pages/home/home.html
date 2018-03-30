@@ -28,9 +28,9 @@
     <ion-card-header> Here are the possible sentences you said: </ion-card-header>
       <ion-card-content>
         <ion-list>
-            <ion-item *ngFor="let match of matches">
+            <button ion-button *ngFor="let match of matches">
               {{ match }}
-            </ion-item>
+            </button>
         </ion-list>
       </ion-card-content>
   </ion-card>
