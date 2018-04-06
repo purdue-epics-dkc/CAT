@@ -10,4 +10,7 @@ import { GlovesPage } from './gloves';
     IonicPageModule.forChild(GlovesPage),
   ],
 })
-export class GlovesPageModule {}
+export class GlovesPageModule {
+  
+}
+ 

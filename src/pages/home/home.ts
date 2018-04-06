@@ -5,6 +5,7 @@ import { AboutPage } from '../about/about';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { ChangeDetectorRef } from '@angular/core';
 import { AvatarPage } from '../avatar/avatar';
+import { WindowsAzure } from 
 
 @Component({
   selector: 'page-home',
@@ -13,8 +14,14 @@ import { AvatarPage } from '../avatar/avatar';
 export class HomePage {
   matches: String[];
   isRecording = false;
+  WindowsAzure: any;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, private speechRecognition: SpeechRecognition, private plt: Platform, private cd: ChangeDetectorRef) {}
+
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, private speechRecognition: SpeechRecognition, private plt: Platform, private cd: ChangeDetectorRef) {
+
+    var client = WindowsAzure.MobileServiceClient("https://cat-app.azurewebsites.net")
+
+  }
 
   isIos() {
     return this.plt.is('ios');

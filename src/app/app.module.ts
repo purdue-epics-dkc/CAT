@@ -11,7 +11,7 @@ import { TranscriptPage } from '../pages/transcript/transcript';
 import { LibraryPage } from '../pages/library/library';
 import { AboutPage } from '../pages/about/about';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
-
+import { BLE } from '@ionic-native/ble';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,8 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SpeechRecognition
+    SpeechRecognition, 
+    BLE
   ]
 })
 export class AppModule {}

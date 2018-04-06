@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BLE } from '@ionic-native/ble';
 
-/**
- * Generated class for the GlovesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -14,12 +9,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'gloves.html',
 })
 export class GlovesPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private ble: BLE) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GlovesPage');
   }
 
+  connectToGlove(){
+
+  }
+
+  disconnectFromGlove(){
+    
+  }
 }
