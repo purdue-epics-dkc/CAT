@@ -5,7 +5,7 @@ import { AboutPage } from '../about/about';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { ChangeDetectorRef } from '@angular/core';
 import { AvatarPage } from '../avatar/avatar';
-import { WindowsAzure } from 
+// import { WindowsAzure } from 
 
 @Component({
   selector: 'page-home',
