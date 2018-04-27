@@ -7,3 +7,6 @@ The app has two routes for data flow:
 1. The first flow is when the non-deaf user speaks into the app, their speech is recorded and is sent to the backend where it is translated from english to gloss, then the app creates a signing avatar to show the deaf person.
 
 2. The second flow is when the deaf user signs using gloves with flex sensors on the fingers. The flex sensors pick up how much each finger is flexed and then this data is sent to the backend where it determines the correct word or phrase depending on the deaf users signing. The word or phrase is then displayed on the app for the non-deaf user to read or hear.
+
+
+To run the app with the cordova functionalities, download the project as an Xcode file, plug a phone into the computer and select it as the build destination. Run the build and it will install the app on the phone. From there all of the native functionalities should work.
