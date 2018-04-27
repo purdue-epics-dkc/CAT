@@ -5,28 +5,28 @@ import { AboutPage } from '../about/about';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { ChangeDetectorRef } from '@angular/core';
 import { AvatarPage } from '../avatar/avatar';
-import { WindowsAzure } from 
+import { GlovesPage } from '../gloves/gloves';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
   matches: String[];
   isRecording = false;
   WindowsAzure: any;
-
+ // client = WindowsAzure.MobileServiceClient("https://cat-app.azurewebsites.net");
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, private speechRecognition: SpeechRecognition, private plt: Platform, private cd: ChangeDetectorRef) {
 
-    var client = WindowsAzure.MobileServiceClient("https://cat-app.azurewebsites.net")
+ //   var client = WindowsAzure.MobileServiceClient("https://cat-app.azurewebsites.net")
 
   }
 
   isIos() {
     return this.plt.is('ios');
   }
- 
+  
   startListening() {
     let options = {
       language: 'en-US'
@@ -58,8 +58,8 @@ export class HomePage {
     this.navCtrl.push(LibraryPage);
   }
 
-  goToAboutPage() {
-    this.navCtrl.push(AboutPage);
+  goToGlovePage() {
+    this.navCtrl.push(GlovesPage);
   }
 
   goToAvatarPage() {

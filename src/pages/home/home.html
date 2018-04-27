@@ -9,22 +9,13 @@
 <ion-content padding>
   <h1> Computer ASL Translation </h1>
   <button ion-button full color="primary" (click)="getPermission()">Activate Microphone</button>
-  <button ion-button round color="danger" class="record" (click)="startListening()">\u25CF</button>
-  <button ion-button round color="danger" class="stop" (click)="stopListening()" *ngIf="isIos()">\u25A0</button>
+  <button ion-button round color="danger" class="record" (click)="startListening()">Record</button>
+  <button ion-button round color="danger" class="stop" (click)="stopListening()" *ngIf="isIos()">Stop</button>
   <p>
     Push the button above to start recording speech!
   </p>
 
-  <button ion-button round color="primary"(click)="goToLibraryPage()">Library</button>
-  <p color class="message">
-    Push the button above to access saved messages!
-  </p>
-  <button ion-button round color="primary"(click)="goToAboutPage()">About</button>
-  <p color class="message">
-    Push the button above to learn about us!
-  </p>
-
-  <ion-card>
+<ion-card>
     <ion-card-header> Possible Phrases: </ion-card-header>
       <ion-card-content>
         <ion-list>
@@ -34,6 +25,17 @@
         </ion-list>
       </ion-card-content>
   </ion-card>
+
+  <button ion-button round color="primary"(click)="goToLibraryPage()">Library</button>
+  <p color class="message">
+    Push the button above to access saved messages!
+  </p>
+  <button ion-button round color="primary"(click)="goToGlovePage()">Gloves</button>
+  <p color class="message">
+    Push the button above to go to the gloves page!
+  </p>
+
+  
 </ion-content> 
    
   

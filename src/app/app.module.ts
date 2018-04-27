@@ -12,6 +12,7 @@ import { LibraryPage } from '../pages/library/library';
 import { AboutPage } from '../pages/about/about';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { BLE } from '@ionic-native/ble';
+import { GlovesPage } from '../pages/gloves/gloves';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BLE } from '@ionic-native/ble';
     AvatarPage,
     TranscriptPage,
     LibraryPage,
-    AboutPage
+    AboutPage,
+    GlovesPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { BLE } from '@ionic-native/ble';
     AvatarPage,
     TranscriptPage,
     LibraryPage,
-    AboutPage
+    AboutPage,
+    GlovesPage
   ],
   providers: [
     StatusBar,

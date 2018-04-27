@@ -16,11 +16,4 @@ export class GlovesPage {
     console.log('ionViewDidLoad GlovesPage');
   }
 
-  connectToGlove(){
-
-  }
-
-  disconnectFromGlove(){
-    
-  }
 }
