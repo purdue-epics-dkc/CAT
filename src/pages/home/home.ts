@@ -6,6 +6,7 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { ChangeDetectorRef } from '@angular/core';
 import { AvatarPage } from '../avatar/avatar';
 import { GlovesPage } from '../gloves/gloves';
+// import { WindowsAzure } from 
 
 @Component({
   selector: 'page-home',
